@@ -1,14 +1,13 @@
-def check_name(str)
-  if str.include?(".")
-    puts "!エラー!記号は登録できません"
-  elsif str.include?(" ")
-    puts "!エラー!空白は登録できません"
+def judge_num(n)
+  if n > 10
+    puts "10より大きい数字です"
+  elsif n <= 0
+    puts "0以下の数字です"
   else
-    puts "登録が完了しました"
+    puts "10以下の数字です"
   end
 end
 
+input = gets.to_i
 
-puts "登録したい名前を入力してください(例)YamadaTaro"
-str = gets
-check_name(str) 
+judge_num(input)
