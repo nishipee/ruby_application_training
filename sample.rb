@@ -1,13 +1,8 @@
-def judge_num(n)
-  if n > 10
-    puts "10より大きい数字です"
-  elsif n <= 0
-    puts "0以下の数字です"
-  else
-    puts "10以下の数字です"
-  end
-end
+fruits_price = [["apple", [200, 250, 220]], ["orange", [100, 120, 80]], ["melon", [1200, 1500]]]
+apple_total_price = fruits_price[0][1][0] + fruits_price[0][1][1] + fruits_price[0][1][2]
+orange_total_price = fruits_price[1][1][0] + fruits_price[1][1][1] + fruits_price[1][1][2]
+melon_total_price = fruits_price[2][1][0] + fruits_price[2][1][1] + fruits_price[2][1][2]
 
-input = gets.to_i
-
-judge_num(input)
+each.fruits_price do |fruit|
+  puts "#{fruit[0]}の合計金額は#{"
+  
