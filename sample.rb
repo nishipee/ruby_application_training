@@ -1,11 +1,9 @@
-def in1to10(num, outside_mode)
-  if (outside_mode == true) || (num >= 1 && num <= 10)
-    puts true
-  else
-    puts false
+def output(num)
+  num.times do
+    puts "Hello!"
   end
 end
 
-in1to10(5,false)
-in1to10(11,false)
-in1to10(11,true)
+puts "何回表示させますか？"
+num = gets.to_i
+output(num)
