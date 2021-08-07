@@ -1,10 +1,11 @@
-fruits_price = [["apple", [200, 250, 220]], ["orange", [100, 120, 80]], ["melon", [1200, 1500]]]
-
-fruits_price.each do |fruit|
-  sum = 0
-  fruit[1].each do |price|
-    sum += price
+def in1to10(num, outside_mode)
+  if (outside_mode == true) || (num >= 1 && num <= 10)
+    puts true
+  else
+    puts false
   end
-  puts "#{fruit[0]}の合計金額は#{sum}円です"
 end
-  
+
+in1to10(5,false)
+in1to10(11,false)
+in1to10(11,true)
