@@ -1,10 +1,11 @@
-def culuculation(n)
-  if n >= 1 && n <= 50
-    pencil_num = n * 12
-    puts pencil_num
+def design(s)
+  str = "+" * (s.length + 2)
+  if s.length >= 1 && s.length <= 100
+    puts str
+    puts "+#{s}+"
+    puts str
   end
 end
 
-n = gets.to_i
-
-culuculation(n)
+s = gets.chomp
+design(s)
