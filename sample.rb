@@ -1,9 +1,10 @@
-def output(num)
-  num.times do
-    puts "Hello!"
+def culuculation(n)
+  if n >= 1 && n <= 50
+    pencil_num = n * 12
+    puts pencil_num
   end
 end
 
-puts "何回表示させますか？"
-num = gets.to_i
-output(num)
+n = gets.to_i
+
+culuculation(n)
