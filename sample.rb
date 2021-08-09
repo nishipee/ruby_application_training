@@ -1,8 +1,9 @@
-def eve(n)
-  if n >= 2 && n <= 31
-    puts n - 1
-  end
+def missing_char(str, n)
+  str.slice!(n)
+  puts str
 end
 
-n = gets.to_i
-eve(n)
+
+missing_char('kitten', 1)
+missing_char('kitten', 2)
+missing_char('kitten', 4)
