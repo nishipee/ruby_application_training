@@ -1,5 +1,5 @@
 def police_trouble(a, b)
-  if (a == true && b == true) || (a == false && b == false)
+  if (a && b) || (!a && !b)
     puts true
   else
     puts false
