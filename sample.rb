@@ -1,9 +1,11 @@
-def missing_char(str, n)
-  str.slice!(n - 1)
-  puts str
+def police_trouble(a, b)
+  if (a == true && b == true) || (a == false && b == false)
+    puts true
+  else
+    puts false
+  end
 end
 
-
-missing_char('kitten', 1)
-missing_char('kitten', 2)
-missing_char('kitten', 4)
+police_trouble(true, false)
+police_trouble(false, false)
+police_trouble(true, true)
