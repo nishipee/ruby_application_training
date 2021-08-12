@@ -1,7 +1,7 @@
-def count_hi(str)
-  puts str.scan("hi").length
+def count_code(str)
+  puts str.index("code", 0) + 1
 end
 
-count_hi('abc hi ho')
-count_hi('ABChi hi')
-count_hi('hihi')
+count_code("codexxcode")
+count_code("aaacodebbb")
+count_code("cozexxcode")
