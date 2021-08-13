@@ -1,7 +1,12 @@
-def count_code(str)
-  puts str.index("code", 0) + 1
+def parrot_trouble(talking, hour)
+  if talking && (hour >=20 || hour < 7)
+    puts "NG"
+  else
+    puts "OK"
+  end
 end
 
-count_code("codexxcode")
-count_code("aaacodebbb")
-count_code("cozexxcode")
+parrot_trouble(true, 6)
+parrot_trouble(true, 7)
+parrot_trouble(false, 6)
+parrot_trouble(false, 7)
