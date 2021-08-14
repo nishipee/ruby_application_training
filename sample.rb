@@ -1,12 +1,13 @@
-def parrot_trouble(talking, hour)
-  if talking && (hour >=20 || hour < 7)
-    puts "NG"
-  else
-    puts "OK"
+def count_evens(num)
+  sum = 0
+  num.each do |n|
+    if n.even?
+      sum += 1
+    end
   end
+  puts sum
 end
 
-parrot_trouble(true, 6)
-parrot_trouble(true, 7)
-parrot_trouble(false, 6)
-parrot_trouble(false, 7)
+count_evens([2, 1, 2, 3, 4])
+count_evens([2, 2, 0])
+count_evens([1, 3, 5])
