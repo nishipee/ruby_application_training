@@ -1,13 +1,11 @@
-def count_evens(num)
-  sum = 0
-  num.each do |n|
-    if n.even?
-      sum += 1
-    end
+def array123(nums)
+  if nums.include?(1) && nums.include?(2) && nums.include?(3)
+    puts true
+  else
+    puts false
   end
-  puts sum
 end
 
-count_evens([2, 1, 2, 3, 4])
-count_evens([2, 2, 0])
-count_evens([1, 3, 5])
+array123([1, 1, 2, 3, 1])
+array123([1, 2, 4, ])
+array123([1, 1, 2, 1, 4, 3])
