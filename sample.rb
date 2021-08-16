@@ -1,11 +1,12 @@
-def array123(nums)
-  if nums.include?(1) && nums.include?(2) && nums.include?(3)
-    puts true
-  else
+def sleep_in(wday, hday)
+  if hday == false
     puts false
+  else
+    puts true
   end
 end
 
-array123([1, 1, 2, 3, 1])
-array123([1, 2, 4, ])
-array123([1, 1, 2, 1, 4, 3])
+
+sleep_in(false, false)
+sleep_in(true, false)
+sleep_in(false, true)
