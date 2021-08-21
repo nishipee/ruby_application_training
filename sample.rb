@@ -1,19 +1,18 @@
-def calculate_points(amount, is_birthday)
-  if amount >= 1000
-    if is_birthday
-      puts "ポイントは#{(amount * 0.05 * 5).to_i}点です"
+def fizz_buzz
+  num = 1
+  while (num <= 100) do
+    if (num % 3 == 0) && (num % 5 == 0)
+      puts "FizzBuzz"
+    elsif (num % 3) == 0
+      puts "Fizz"
+    elsif (num % 5) == 0
+      puts "Buzz"
     else
-      puts "ポイントは#{(amount * 0.05).to_i}点です"
+      puts num
     end
-  else
-    if is_birthday
-      puts "ポイントは#{(amount * 0.03 * 5).to_i}点です"
-    else
-      puts "ポイントは#{(amount * 0.03).to_i}点です"
-    end
+
+    num = num + 1
   end
 end
 
-calculate_points(500, false)
-calculate_points(2000, false)
-calculate_points(3000, true)
+fizz_buzz
