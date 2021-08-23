@@ -1,17 +1,13 @@
-def fizzbuzz(max_num)
-  (1..max_num).each do |num|
-    if (num % 3 == 0 ) && (num % 5 == 0)
-      puts "FizzBuzz"
-    elsif num % 3 == 0
-      puts "Fizz"
-    elsif num % 5 == 0
-      puts "Buzz"
-    else
-      puts num
-    end
+def end_other(a, b)
+  if a.downcase.slice!(-3..-1) == b.downcase
+    puts "True"
+  elsif b.downcase.slice!(-3..-1) == a.downcase
+    puts "True"
+  else
+    puts "False"
   end
 end
 
-puts 'いくつまで数えますか？'
-num = gets.to_i
-fizzbuzz(num)
+end_other('Hiabc', 'abc')
+end_other('AbC', 'HiaBc')
+end_other("abc", "HaIoBc")
