@@ -1,13 +1,31 @@
-def end_other(a, b)
-  if a.downcase.slice!(-3..-1) == b.downcase
-    puts "True"
-  elsif b.downcase.slice!(-3..-1) == a.downcase
-    puts "True"
-  else
-    puts "False"
+# メソッドの定義の仕方が違う。
+
+class Student
+  def set_name(name)
+    @name = name
+  end
+
+  def self.introduce
+    puts "私の名前は#{@name}です。"
   end
 end
 
-end_other('Hiabc', 'abc')
-end_other('AbC', 'HiaBc')
-end_other("abc", "HaIoBc")
+student = Student.new
+student.set_name("山田太郎")
+Student.introduce
+
+# もしくは
+
+class Student
+  def set_name(name)
+    @name = name
+  end
+
+  def introduce
+    puts "私の名前は#{@name}です。"
+  end
+end
+
+student = Student.new
+student.set_name("山田太郎")
+student.introduce
