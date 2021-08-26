@@ -1,31 +1,8 @@
-# メソッドの定義の仕方が違う。
-
-class Student
-  def set_name(name)
-    @name = name
-  end
-
-  def self.introduce
-    puts "私の名前は#{@name}です。"
-  end
+def array_count9(nums)
+  n = nums.count(9)
+  puts "配列の中には9が#{n}個あります"
 end
 
-student = Student.new
-student.set_name("山田太郎")
-Student.introduce
-
-# もしくは
-
-class Student
-  def set_name(name)
-    @name = name
-  end
-
-  def introduce
-    puts "私の名前は#{@name}です。"
-  end
-end
-
-student = Student.new
-student.set_name("山田太郎")
-student.introduce
+array_count9([1, 2, 9])
+array_count9([1, 9, 9])
+array_count9([1, 9, 9, 3, 9])
