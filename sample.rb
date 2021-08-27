@@ -1,8 +1,13 @@
-def array_count9(nums)
-  n = nums.count(9)
-  puts "配列の中には9が#{n}個あります"
+def near_ten(num)
+  n = num % 10
+  if n <= 2 || n >= 8
+    puts "True"
+  else
+    puts "False"
+  end
 end
 
-array_count9([1, 2, 9])
-array_count9([1, 9, 9])
-array_count9([1, 9, 9, 3, 9])
+
+near_ten(12)
+near_ten(17)
+near_ten(19)
