@@ -1,13 +1,14 @@
-def near_ten(num)
-  n = num % 10
-  if n <= 2 || n >= 8
-    puts "True"
+def withdraw(balance, amount)
+  fee = 110
+  b  = balance - amount - fee
+  if b >= 0
+    puts "#{amount}円引き落としました。残高は#{b}円です"
   else
-    puts "False"
+    puts "残高不足です"
   end
 end
 
-
-near_ten(12)
-near_ten(17)
-near_ten(19)
+balance = 100000
+puts "いくら引き落としますか？（手数料110円かかります）"
+money = gets.to_i
+withdraw(balance, money)
