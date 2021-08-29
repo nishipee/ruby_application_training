@@ -1,14 +1,17 @@
-def withdraw(balance, amount)
-  fee = 110
-  b  = balance - amount - fee
-  if b >= 0
-    puts "#{amount}円引き落としました。残高は#{b}円です"
-  else
-    puts "残高不足です"
+def lone_sum(ary)
+  if ary[0] != ary[1] && ary[0] != ary[2] && ary[1] != ary[2]
+    puts ary.sum
+  elsif ary[0] == ary [1] && ary[1] == ary[2]
+    puts 0
+  elsif ary[0] == ary[1]
+    puts ary[2]
+  elsif ary[1] == ary[2]
+    puts ary[0]
+  elsif ary[0] == ary[2]
+    puts ary[1]
   end
 end
 
-balance = 100000
-puts "いくら引き落としますか？（手数料110円かかります）"
-money = gets.to_i
-withdraw(balance, money)
+lone_sum([1, 2, 3])
+lone_sum([3, 2, 3])
+lone_sum([3, 3, 3])
