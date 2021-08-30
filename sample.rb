@@ -1,17 +1,29 @@
-def lone_sum(ary)
-  if ary[0] != ary[1] && ary[0] != ary[2] && ary[1] != ary[2]
-    puts ary.sum
-  elsif ary[0] == ary [1] && ary[1] == ary[2]
-    puts 0
-  elsif ary[0] == ary[1]
-    puts ary[2]
-  elsif ary[1] == ary[2]
-    puts ary[0]
-  elsif ary[0] == ary[2]
-    puts ary[1]
+def binary_search(array, right, n)
+  left = 0
+  while left <= right do
+    center = (left + right) / 2
+    if array[center] == n
+      return center
+    elsif array[center] < n
+      left = center + 1
+    else
+      right = center - 1
+    end
   end
+  return "none"
 end
 
-lone_sum([1, 2, 3])
-lone_sum([3, 2, 3])
-lone_sum([3, 3, 3])
+
+array=[1,3,5,6,9,10,13,20,26,31]
+number_of_elements = array.length
+
+puts "検索したい数字を入力してください"
+n = gets.to_i
+
+result = binary_search(array, number_of_elements, n)
+
+if result == "none"
+  puts "#{n}は配列の中に存在しません"
+else
+  puts "#{n}は配列の#{result}番目にあります"
+end
