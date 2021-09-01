@@ -1,29 +1,18 @@
-def binary_search(array, right, n)
-  left = 0
-  while left <= right do
-    center = (left + right) / 2
-    if array[center] == n
-      return center
-    elsif array[center] < n
-      left = center + 1
-    else
-      right = center - 1
-    end
+def near_ten(num)
+  hundred = num / 100
+  tenth = (num % 100) / 10
+  first = num % 10
+  total = hundred + tenth + first
+  if total % 10 >= 8 || total % 10 <= 2
+    puts "True"
+  elsif total % 10 <= 5
+    puts "10の倍数との差は#{total % 10}です"
+  elsif total % 10 <= 7
+    puts "10の倍数との差は#{(10 - total % 10).abs}です"
   end
-  return "none"
 end
 
 
-array=[1,3,5,6,9,10,13,20,26,31]
-number_of_elements = array.length
-
-puts "検索したい数字を入力してください"
-n = gets.to_i
-
-result = binary_search(array, number_of_elements, n)
-
-if result == "none"
-  puts "#{n}は配列の中に存在しません"
-else
-  puts "#{n}は配列の#{result}番目にあります"
-end
+near_ten(117)
+near_ten(123)
+near_ten(111)
