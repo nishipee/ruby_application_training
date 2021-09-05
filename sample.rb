@@ -1,15 +1,12 @@
-def xyz_there(str)
-  if str.include?(".xyz")
-    puts "False"
-  elsif str.include?("xyz")
-    puts "True"
-  else
-    puts "False"
+class Book
+  attr_reader :title, :price
+
+  def initialize(title, price)
+    @title = title
+    @price = price
   end
 end
-
-xyz_there('abcxyz')
-xyz_there('abc.xyz')
-xyz_there('xyz.abc')
-xyz_there('azbycx')
-xyz_there('a.zbycx')
+  
+book = Book.new("sadfas", 500)
+puts book.title
+puts book.price
