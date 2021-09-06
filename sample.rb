@@ -1,12 +1,4 @@
-class Book
-  attr_reader :title, :price
-
-  def initialize(title, price)
-    @title = title
-    @price = price
-  end
+10.times do |i|
+  puts "#{i + 1}回目の繰り返し"
 end
-  
-book = Book.new("sadfas", 500)
-puts book.title
-puts book.price
+
